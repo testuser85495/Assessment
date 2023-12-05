@@ -1,26 +1,11 @@
 //Create menu driven calculator using function
 
-
 #include<stdio.h>
-
-int main()
+	//function created
+int calculator(int num1,int num2,int choice)
 {
-	//Variables
-	int choice;
-	int num1,num2,result;
-	
-	
-	printf("--------------MENU--------------\n");
-	printf("1. Addition\n");    // \n is use for new line
-	printf("2. Substraction\n");
-	printf("3. Multiplication\n");
-	printf("4. Division\n"); 
-	
-	//input for choice
-	printf("Enter your choice: ");
-	scanf("%d",&choice);         // %d is Format specifier
-	
-	//If condition was execute when user choice a proper value from menu 
+	int result;
+		//If condition was execute when user choice a proper value from menu 
 	if(choice <= 4 && choice >=1)
 	{
 		//input for user 1st number
@@ -64,7 +49,30 @@ int main()
 	else
 	{
 		printf("Invalid choice !!!!\n");
-	}
+	}	
+}
+
+
+
+int main()
+{
+	//Variables
+	int choice;
+	int num1,num2;
+	
+	
+	printf("--------------MENU--------------\n");
+	printf("1. Addition\n");    // \n is use for new line
+	printf("2. Substraction\n");
+	printf("3. Multiplication\n");
+	printf("4. Division\n"); 
+	
+	//input for choice
+	printf("Enter your choice: ");
+	scanf("%d",&choice);         // %d is Format specifier
+	
+	//function call
+	calculator(num1,num2,choice);
 		
 	return 0;
 }
